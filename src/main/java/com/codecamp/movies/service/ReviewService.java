@@ -14,7 +14,7 @@ package com.codecamp.movies.service;
 public class ReviewService {
     private ReviewRepository reviewRepository;
     @Autowired
-    MongoTemplate mongoTempalte;
+    MongoTemplate mongoTemplate;
 
     public ReviewService(ReviewRepository reviewRepository) {
         this.reviewRepository = reviewRepository;
@@ -22,7 +22,7 @@ public class ReviewService {
 
     public Review createReview(String reviewBody, String imdbId) {
         Review review = reviewRepository.insert(new Review(reviewBody));
-        mongoTempalte.update(Movie.class)
+        mongoTemplate.update(Movie.class)
                 .matching(Criteria.where("imdbId").is(imdbId))
                 .apply(new Update().push("reviewIds").value(review))
                 .first();

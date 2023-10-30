@@ -6,7 +6,6 @@ import lombok.NoArgsConstructor;
 import org.bson.types.ObjectId;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
-import org.springframework.data.mongodb.core.mapping.DocumentReference;
 
 import java.util.List;
 
@@ -14,16 +13,13 @@ import java.util.List;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class Movie {
+public class Trivia {
     @Id
     private ObjectId id;
-    private String imdbId;
-    private String title;
-    private String releaseDate;
-    private String trailerLink;
-    private String poster;
-    private List<String> genre;
-    private List<String> backdrop;
-    @DocumentReference
-    private List<Review> reviewIds;
+    private String question;
+    private String answer;
+    private String type;
+    private String category;
+    private String book;
+    private String page;
 }

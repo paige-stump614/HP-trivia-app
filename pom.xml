@@ -12,7 +12,7 @@
 	<artifactId>trivia</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>trivia</name>
-	<description>Demo project for Spring Boot, react, mongo</description>
+	<description>trivia project for paige.io</description>
 	<properties>
 		<java.version>17</java.version>
 	</properties>

@@ -1,11 +1,10 @@
-package com.codecamp.movies.service;
+package com.codecamp.trivia.service;
 
-import com.codecamp.movies.model.Trivia;
-import com.codecamp.movies.repository.TriviaRepository;
+import com.codecamp.trivia.model.Trivia;
+import com.codecamp.trivia.repository.TriviaRepository;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
-import java.util.Optional;
 
 @Service
 public class TriviaService {

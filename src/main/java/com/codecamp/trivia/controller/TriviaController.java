@@ -1,7 +1,7 @@
-package com.codecamp.movies.controller;
+package com.codecamp.trivia.controller;
 
-import com.codecamp.movies.model.Trivia;
-import com.codecamp.movies.service.TriviaService;
+import com.codecamp.trivia.model.Trivia;
+import com.codecamp.trivia.service.TriviaService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;

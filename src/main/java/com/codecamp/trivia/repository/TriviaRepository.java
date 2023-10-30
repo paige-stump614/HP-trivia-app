@@ -1,11 +1,9 @@
-package com.codecamp.movies.repository;
+package com.codecamp.trivia.repository;
 
-import com.codecamp.movies.model.Trivia;
+import com.codecamp.trivia.model.Trivia;
 import org.bson.types.ObjectId;
 import org.springframework.data.mongodb.repository.MongoRepository;
 import org.springframework.stereotype.Repository;
-
-import java.util.Optional;
 
 @Repository
 public interface TriviaRepository extends MongoRepository<Trivia, ObjectId> {

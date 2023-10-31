@@ -34,3 +34,7 @@ build/
 
 ### ENV ###
 .env
+src/main/resources/
+pw.txt
+X509-cert-1760593162227639523.pem
+

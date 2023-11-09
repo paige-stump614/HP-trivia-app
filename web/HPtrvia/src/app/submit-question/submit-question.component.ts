@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, FormArray, NgForm } from '@angular/forms';
+import { Question } from '../question/question.model';
 
 @Component({
   selector: 'app-submit-question',
@@ -17,12 +18,16 @@ export class SubmitQuestionComponent implements OnInit {
     topic: new FormControl(null)
   });
 
+  type: string[] = ['magic', 'muggle'];
+
+  question: Question;
+
   ngOnInit() {
   }
 
   onSubmit(form: NgForm) {
-  console.log("form submitted");
-  console.log(form);
+    this.question = form.value;
+    console.log(this.question);
   }
 
 }

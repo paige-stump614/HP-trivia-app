@@ -1,5 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { RouterModule, Routes } from '@angular/router';
+import { FormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -8,6 +10,12 @@ import { AnswerComponent } from './answer/answer.component';
 import { ScoreboardComponent } from './scoreboard/scoreboard.component';
 import { SubmitQuestionComponent } from './submit-question/submit-question.component';
 import { HeaderComponent } from './header/header.component';
+import { HomeComponent } from './home/home.component';
+
+const appRoutes: Routes = [
+  {path: 'home', component: HomeComponent},
+  {path: 'submit-question', component: SubmitQuestionComponent}
+]
 
 @NgModule({
   declarations: [
@@ -16,11 +24,14 @@ import { HeaderComponent } from './header/header.component';
     AnswerComponent,
     ScoreboardComponent,
     SubmitQuestionComponent,
-    HeaderComponent
+    HeaderComponent,
+    HomeComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    RouterModule.forRoot(appRoutes),
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

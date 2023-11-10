@@ -5,8 +5,8 @@ import { Injectable } from '@angular/core';
 
 @Injectable()
 export class SubmitQuestionService {
-  submitQuestionUrl: string = '/trivia/submitQuestion';
-  
+  submitQuestionUrl: string = '/api/trivia/submitQuestion';
+
   constructor(private http: HttpClient){
   }
 

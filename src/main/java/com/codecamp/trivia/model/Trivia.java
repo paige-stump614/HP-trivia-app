@@ -20,4 +20,5 @@ public class Trivia {
     private String category;
     private String book;
     private String page;
+    private String[] topic;
 }

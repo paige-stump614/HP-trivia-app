@@ -18,8 +18,14 @@ public class TriviaController {
         this.triviaService = triviaService;
     }
 
-    @GetMapping
+    @GetMapping("/getAll")
     public ResponseEntity<List<Trivia>> getAllQuestions() {
         return new ResponseEntity<List<Trivia>>(triviaService.getAllQuestions(), HttpStatus.OK);
+    }
+
+    @PostMapping(value = "/submitQuestion")
+    public HttpStatus submitQuestion() {
+        System.out.println("you hit the backend");
+        return HttpStatus.OK;
     }
 }

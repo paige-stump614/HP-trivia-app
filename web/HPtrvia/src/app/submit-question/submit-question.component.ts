@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { FormGroup, FormControl, FormArray, NgForm, Validators } from '@angular/forms';
+import { FormGroup, FormControl, NgForm } from '@angular/forms';
 import { Question } from '../question/question.model';
 import { SubmitQuestionService } from './submit-question.service';
 
@@ -10,7 +10,6 @@ import { SubmitQuestionService } from './submit-question.service';
 })
 export class SubmitQuestionComponent implements OnInit {
   questionForm: FormGroup;
-  @Input() required: boolean;
   question: Question;
 
   constructor(private submitQuestionService: SubmitQuestionService) {
@@ -18,12 +17,12 @@ export class SubmitQuestionComponent implements OnInit {
 
   ngOnInit() {
     this.questionForm = new FormGroup({
-      question: new FormControl(null, [Validators.required]),
-      answer: new FormControl(null, Validators.required),
-      type: new FormControl(null, Validators.required),
-      category: new FormControl(null, Validators.required),
-      book: new FormControl(null, Validators.required),
-      page: new FormControl(null, Validators.required),
+      question: new FormControl(null),
+      answer: new FormControl(null),
+      type: new FormControl(null),
+      category: new FormControl(null),
+      book: new FormControl(null),
+      page: new FormControl(null),
       topic: new FormControl(null)
     });
 

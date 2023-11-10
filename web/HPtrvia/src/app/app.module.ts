@@ -12,6 +12,7 @@ import { SubmitQuestionComponent } from './submit-question/submit-question.compo
 import { HeaderComponent } from './header/header.component';
 import { HomeComponent } from './home/home.component';
 import { SubmitQuestionService } from './submit-question/submit-question.service'
+import { HttpClientModule } from '@angular/common/http';
 
 const appRoutes: Routes = [
   {path: 'home', component: HomeComponent},
@@ -31,7 +32,8 @@ const appRoutes: Routes = [
     BrowserModule,
     AppRoutingModule,
     RouterModule.forRoot(appRoutes),
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [SubmitQuestionService],
   bootstrap: [AppComponent]

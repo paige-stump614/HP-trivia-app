@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, NgForm } from '@angular/forms';
 import { Question } from '../question/question.model';
 import { SubmitQuestionService } from './submit-question.service';
@@ -30,7 +30,6 @@ export class SubmitQuestionComponent implements OnInit {
 
   onSubmit(form: NgForm) {
     this.question = form.value;
-    console.log('in on submit in the COMPONENT')
     this.submitQuestionService.saveNewQuestion(this.question);
   }
 

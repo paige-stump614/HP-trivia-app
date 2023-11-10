@@ -1,4 +1,4 @@
-package com.codecamp.trivia;
+package com.paigeio.trivia;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

@@ -1,7 +1,7 @@
-package com.codecamp.trivia.controller;
+package com.paigeio.trivia.controller;
 
-import com.codecamp.trivia.model.Trivia;
-import com.codecamp.trivia.service.TriviaService;
+import com.paigeio.trivia.model.Trivia;
+import com.paigeio.trivia.service.TriviaService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -20,12 +20,12 @@ public class TriviaController {
 
     @GetMapping("/getAll")
     public ResponseEntity<List<Trivia>> getAllQuestions() {
+        System.out.println("in endpoint");
         return new ResponseEntity<List<Trivia>>(triviaService.getAllQuestions(), HttpStatus.OK);
     }
 
     @PostMapping(value = "/submitQuestion")
-    public HttpStatus submitQuestion() {
+    public void submitQuestion() {
         System.out.println("you hit the backend");
-        return HttpStatus.OK;
     }
 }

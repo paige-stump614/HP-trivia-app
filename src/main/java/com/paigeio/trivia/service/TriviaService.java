@@ -1,7 +1,7 @@
-package com.codecamp.trivia.service;
+package com.paigeio.trivia.service;
 
-import com.codecamp.trivia.model.Trivia;
-import com.codecamp.trivia.repository.TriviaRepository;
+import com.paigeio.trivia.model.Trivia;
+import com.paigeio.trivia.repository.TriviaRepository;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -15,6 +15,8 @@ public class TriviaService {
     }
 
     public List<Trivia> getAllQuestions() {
+        System.out.println("in service");
+        List<Trivia> trivias = triviaRepository.findAll();
         return triviaRepository.findAll();
     }
 

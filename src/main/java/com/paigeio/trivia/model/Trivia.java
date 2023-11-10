@@ -1,4 +1,4 @@
-package com.codecamp.trivia.model;
+package com.paigeio.trivia.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -7,7 +7,7 @@ import org.bson.types.ObjectId;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
-@Document(collection = "movies")
+@Document(collection = "HPTrivia")
 @Data
 @AllArgsConstructor
 @NoArgsConstructor

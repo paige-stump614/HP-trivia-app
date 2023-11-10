@@ -7,7 +7,7 @@ import { Question } from '../question/question.model';
   templateUrl: './submit-question.component.html',
   styleUrls: ['./submit-question.component.css']
 })
-export class SubmitQuestionComponent implements OnInit {
+export class SubmitQuestionComponent {
   questionForm = new FormGroup({
     question: new FormControl(null),
     answer: new FormControl(null),
@@ -22,12 +22,13 @@ export class SubmitQuestionComponent implements OnInit {
 
   question: Question;
 
-  ngOnInit() {
+  constructor(private submitQuestionService: SubmitQuestionService) {
   }
 
   onSubmit(form: NgForm) {
     this.question = form.value;
     console.log(this.question);
+    this.submitQuestionService.saveNewQuestion(this.question);
   }
 
 }

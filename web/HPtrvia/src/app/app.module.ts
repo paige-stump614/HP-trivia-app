@@ -11,6 +11,7 @@ import { ScoreboardComponent } from './scoreboard/scoreboard.component';
 import { SubmitQuestionComponent } from './submit-question/submit-question.component';
 import { HeaderComponent } from './header/header.component';
 import { HomeComponent } from './home/home.component';
+import { SubmitQuestionService } from './submit-question/submit-question.service'
 
 const appRoutes: Routes = [
   {path: 'home', component: HomeComponent},
@@ -33,7 +34,7 @@ const appRoutes: Routes = [
     RouterModule.forRoot(appRoutes),
     FormsModule
   ],
-  providers: [],
+  providers: [SubmitQuestionService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

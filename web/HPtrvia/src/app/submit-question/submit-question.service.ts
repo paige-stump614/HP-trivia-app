@@ -5,6 +5,7 @@ import { Question } from '../question/question.model'
 export class SubmitQuestionService {
 
   saveNewQuestion(question: Question) {
-
+    console.log('in the submit question service');
+    console.log('the question object is: ', question);
   }
 }

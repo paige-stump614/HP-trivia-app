@@ -17,7 +17,6 @@ const appRoutes: Routes = [
   {path: 'home', component: HomeComponent},
   {path: 'submit-question', component: SubmitQuestionComponent}
 ]
-
 @NgModule({
   declarations: [
     AppComponent,

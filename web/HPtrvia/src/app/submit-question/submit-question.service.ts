@@ -1,18 +1,19 @@
 import { Observable } from 'rxjs';
 import { Question } from '../question/question.model'
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 
 @Injectable()
 export class SubmitQuestionService {
-  submitQuestionUrl: string = 'localhost:8080/api/trivia/submitQuestion';
+  submitQuestionUrl: string = 'http://localhost:8080/api/trivia/submitQuestion';
+  headers = new HttpHeaders().set('Content-Type', 'application/json; charset=utf-8');
 
   constructor(private http: HttpClient){
+
   }
 
   saveNewQuestion(question: Question) {
-    console.log('the question object is: ', question);
-    this.http.post<any>(this.submitQuestionUrl, question, ).subscribe({
+    this.http.post<any>(this.submitQuestionUrl, question, {headers: this.headers}).subscribe({
       next: data => {
                   console.log(data)
               },

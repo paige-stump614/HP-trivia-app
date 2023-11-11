@@ -59,7 +59,7 @@
         },
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
-          "option": {
+          "options": {
             "browserTarget": "HPtrvia:build",
             "proxyConfig": "src/proxy.config.json"
           },

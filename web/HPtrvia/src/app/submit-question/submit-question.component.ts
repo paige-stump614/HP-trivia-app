@@ -30,7 +30,7 @@ export class SubmitQuestionComponent implements OnInit {
 
   onSubmit(form: NgForm) {
     this.question = form.value;
-    this.submitQuestionService.saveNewQuestion(this.question);
+    this.submitQuestionService.saveNewQuestion(this.question );
   }
 
 }

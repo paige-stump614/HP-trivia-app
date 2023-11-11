@@ -13,6 +13,7 @@ export class SubmitQuestionService {
   }
 
   saveNewQuestion(question: Question) {
+  console.log(question);
     this.http.post<any>(this.submitQuestionUrl, question, {headers: this.headers}).subscribe({
       next: data => {
                   console.log(data)
